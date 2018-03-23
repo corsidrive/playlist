@@ -11,13 +11,13 @@
  *
  * @author tss
  */
-class VideoSQLModel  extends ModelSQL
+class AutoreSQLModel  extends ModelSQL
 {
     
     public function __construct() {
         //connessione;
-        parent::__construct('Video');
-        
+        parent::__construct('Autore');
+       
     }
     
     

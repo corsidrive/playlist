@@ -20,8 +20,11 @@ class Video {
     private $video_url;
     private $visualizzazioni;
 
-    function __construct($data) {
-        $this->setData($data);
+    function __construct($data=NULL) {
+       if($data){
+
+           $this->setData($data);
+       }
     }
 
     
@@ -114,8 +117,8 @@ class Video {
     }
 
     public function getDurata() {
-        $durata = gmdate("i:s", $this->durata); // i -> 00 , s -> 00 00:00
-        return $durata;
+        //$durata = gmdate("i:s", $this->durata); // i -> 00 , s -> 00 00:00
+        return $this->durata;
     }
 
     public function setDurata($durata) {

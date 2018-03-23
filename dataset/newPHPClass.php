@@ -1,0 +1,1 @@
+CREATE TABLE `videoplaylist`.`video` ( `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT , `id_autore` INT(10) UNSIGNED NOT NULL , `durata` INT(10) UNSIGNED NOT NULL , `titolo` VARCHAR(128) NOT NULL , `video_url` VARCHAR(254) NOT NULL , `visualizzazioni` INT(10) NOT NULL , PRIMARY KEY (`id`(10))) ENGINE = InnoDB;

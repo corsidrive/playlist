@@ -4,11 +4,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include '../../../config.php';
-include '../../../model/ModelSQL.php';
-include '../../../model/VideoSQLModel.php';
-include '../../../class/Video.php';
-
+include '../../config.php';
+include '../../model/ModelSQL.php';
+include '../../model/VideoSQLModel.php';
+include '../../class/Video.php';
+//include '../../model/ModelSQL.php';
 
 try{
     
@@ -26,7 +26,7 @@ $video = new Video($video);
 print_r($video);
  
 /* $video->setTitolo('Sono un nuovo titolo'); */
-$id = int_val($videoModel->create($video));
+$id = intval($videoModel->create($video));
 var_dump($id);
 $res = $videoModel->read($id);
 print_r($res);
@@ -34,3 +34,7 @@ print_r($res);
     echo $videoModel->getLastQuery();
     echo $exc->getMessage(); 
 }
+
+
+
+//$stmt->fetchAll(PDO::FETCH_ASSOC)

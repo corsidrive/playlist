@@ -16,7 +16,9 @@
  */
 
 require_once './config.php';
+require './vendor/autoload.php';
 
+// index.php?controller=pagina&action=valore
 $controller = filter_input(INPUT_GET, 'controller');
 $action = filter_input(INPUT_GET, 'action');
 
@@ -28,6 +30,9 @@ if (!file_exists('./controller/' . $controller . '.php') || is_null($controller)
 
 $controller = ucfirst($controller); //home -> Home | home.php -> Home.php
 require './controller/' . $controller . '.php';
+
+// $c = new Home();
+
 $c = new $controller();
 
 if (!is_null($action) && method_exists($c, $action)) {
